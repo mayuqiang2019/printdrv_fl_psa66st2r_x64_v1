@@ -1,0 +1,7 @@
+LIBRARY	printdrv_fl_psa66st2rd
+EXPORTS
+  PrintGetInterfaceVer = ?PrintGetInterfaceVer@@YAXPEAG@Z
+  PrintInit            = ?PrintInit@@YA_NXZ
+  PrintUnInit          = ?PrintUnInit@@YAXXZ
+  PrintCreateInstance  = ?PrintCreateInstance@@YAPEAVIPrinter@print@@XZ
+  PrintReleaseInstance = ?PrintReleaseInstance@@YAXPEAVIPrinter@print@@@Z

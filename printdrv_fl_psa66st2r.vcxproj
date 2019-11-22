@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{43DFFED8-B447-4A88-9F8A-6FC76B797358}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>Z:\drv\</OutDir>
+    <TargetName>printdrv_fl_psa66st2r_x64d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../depend/common_v1/header/Common;../../depend/common_v2/header/common;../../depend/print_interface_v1/header/print;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PRINTDRV_FL_PSA66ST2R_EXPORTS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>CommonD.lib;common2d.lib;printd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../bin/dbg/printdrv_fl_psa66st2rd.dll</OutputFile>
+      <AdditionalLibraryDirectories>../../depend/common_v1/lib/dbg;../../depend/common_v2/lib/dbg;../../depend/print_interface_v1/lib/dbg;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>printdrv_fl_psa66st2rd.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)printdrv_fl_psa66st2r.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)printdrv_fl_psa66st2r.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>chdir ..
+prepare_test_file
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../../depend/common_x64_v1/include;../../depend/common_x64_v2/include;../../depend/print_interface_x64_v1/include;C:\Windows\SysWOW64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;PRINTDRV_FL_PSA66ST2R_EXPORTS;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Common_x64d.lib;common2_x64d.lib;print_x64d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>Z:\drv\printdrv_fl_psa66st2r_x64d.dll</OutputFile>
+      <AdditionalLibraryDirectories>../../depend/common_x64_v1/lib/dbg;../../depend/common_x64_v2/lib/dbg;../../depend/print_interface_x64_v1/lib/dbg;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>printdrv_fl_psa66st2rd.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)printdrv_fl_psa66st2r.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <SubSystem>Windows</SubSystem>
+      <ImportLibrary>$(OutDir)printdrv_fl_psa66st2r.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../depend/common_v1/header/Common;../../depend/common_v2/header/common;../../depend/print_interface_v1/header/print;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PRINTDRV_FL_PSA66ST2R_EXPORTS;_WIN32_WINNT=0x0501;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat />
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Common.lib;common2.lib;print.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../bin/rel/printdrv_fl_psa66st2r.dll</OutputFile>
+      <AdditionalLibraryDirectories>../../depend/common_v1/lib/rel;../../depend/common_v2/lib/rel;../../depend/print_interface_v1/lib/rel;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>printdrv_fl_psa66st2r.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)printdrv_fl_psa66st2r.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>call UpdatePE.bat $(TargetPath)</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../depend/common_x64_v1/include;../../depend/common_x64_v2/include;../../depend/print_interface_x64_v1/include;C:\Windows\SysWOW64;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;PRINTDRV_FL_PSA66ST2R_EXPORTS;_WIN32_WINNT=0x0501;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Common_x64.lib;common2_x64.lib;print_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../build/bin/rel/printdrv_fl_psa66st2r_x64.dll</OutputFile>
+      <AdditionalLibraryDirectories>../../depend/common_x64_v1/lib/rel;../../depend/common_x64_v2/lib/rel;../../depend/print_interface_x64_v1/lib/rel;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>printdrv_fl_psa66st2r.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <ImportLibrary>$(OutDir)printdrv_fl_psa66st2r_x64.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="InvalidRegionException.cpp" />
+    <ClCompile Include="JobFilterGUR126003.cpp" />
+    <ClCompile Include="JobFilterGURNSW200.cpp" />
+    <ClCompile Include="MsgClearErr.cpp" />
+    <ClCompile Include="MsgDefineRegion.cpp" />
+    <ClCompile Include="MsgDefineTempl.cpp" />
+    <ClCompile Include="MsgFeed.cpp" />
+    <ClCompile Include="MsgFlashTransfer.cpp" />
+    <ClCompile Include="MsgLibManage.cpp" />
+    <ClCompile Include="MsgMgr.cpp" />
+    <ClCompile Include="MsgObtainCRC.cpp" />
+    <ClCompile Include="MsgPrint.cpp" />
+    <ClCompile Include="MsgRespCRC.cpp" />
+    <ClCompile Include="MsgRespStatus.cpp" />
+    <ClCompile Include="MsgStatus.cpp" />
+    <ClCompile Include="printdrv_fl_psa66st2r.cpp" />
+    <ClCompile Include="Printer.cpp" />
+    <ClCompile Include="PrinterContext.cpp" />
+    <ClCompile Include="PrinterPort.cpp" />
+    <ClCompile Include="State.cpp" />
+    <ClCompile Include="StateAddGraphic.cpp" />
+    <ClCompile Include="StateAddRegion.cpp" />
+    <ClCompile Include="StateAddTempl.cpp" />
+    <ClCompile Include="StateCompleteFlashTransfer.cpp" />
+    <ClCompile Include="StateCRC.cpp" />
+    <ClCompile Include="StateDefineGraphic.cpp" />
+    <ClCompile Include="StateDefineRegion.cpp" />
+    <ClCompile Include="StateDefineTempl.cpp" />
+    <ClCompile Include="StateDeleteGraphic.cpp" />
+    <ClCompile Include="StateDeleteRegion.cpp" />
+    <ClCompile Include="StateDeleteTempl.cpp" />
+    <ClCompile Include="StateDisconnected.cpp" />
+    <ClCompile Include="StateFlashTransfer.cpp" />
+    <ClCompile Include="StateGATReport.cpp" />
+    <ClCompile Include="StateIdle.cpp" />
+    <ClCompile Include="StateInit.cpp" />
+    <ClCompile Include="StateInitialized.cpp" />
+    <ClCompile Include="StatePollStatus.cpp" />
+    <ClCompile Include="StatePrinting.cpp" />
+    <ClCompile Include="StateReady.cpp" />
+    <ClCompile Include="StateSuspended.cpp" />
+    <ClCompile Include="StateTop.cpp" />
+    <ClCompile Include="StateUnInit.cpp" />
+    <ClCompile Include="Status.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="printdrv_fl_psa66st2r.def" />
+    <None Include="printdrv_fl_psa66st2rd.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="drvException.h" />
+    <ClInclude Include="filter.h" />
+    <ClInclude Include="message.h" />
+    <ClInclude Include="printdrv_fl_psa66st2r.h" />
+    <ClInclude Include="printer.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="state.h" />
+    <ClInclude Include="stateid.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="printdrv_fl_psa66st2r.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
